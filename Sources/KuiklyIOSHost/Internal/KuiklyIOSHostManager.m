@@ -2,7 +2,7 @@
 #import "KuiklyRenderAdapterRegistry.h"
 
 double KuiklyIOSHostVersionNumber = 1.0;
-const unsigned char KuiklyIOSHostVersionString[] = "1.0.1";
+const unsigned char KuiklyIOSHostVersionString[] = "1.0.2";
 
 @implementation KuiklyIOSHostManager
 

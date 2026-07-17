@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "kuiklyIOSHost",
+    name: "KuiklyIOSHost",
     defaultLocalization: "zh-Hans",
     platforms: [
         .iOS(.v13),
