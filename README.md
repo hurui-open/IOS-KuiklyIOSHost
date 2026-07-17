@@ -1,13 +1,10 @@
 # KuiklyHostKit
 
-Kuikly iOS 宿主接入标准包集合，当前拆成两个独立 SPM 包：
+Kuikly iOS 宿主接入标准包集合，对外只暴露一个稳定 SPM 包：
 
 - `KuiklyIOSHost`：宿主侧统一接入入口
-- `OpenKuiklyIOSRender`：渲染核心
 
-宿主 App 默认只需要依赖 `KuiklyIOSHost`。只有业务模块需要直接使用渲染核心 API 时，才额外依赖 `OpenKuiklyIOSRender`。
-
-当前 `OpenKuiklyIOSRender` 版本：`2.20.1`
+渲染核心 `OpenKuiklyIOSRender` 已合并为包内内部目标，由 `KuiklyIOSHost` 统一依赖并对宿主屏蔽细节。
 
 ## 支持的接入方式
 
@@ -26,19 +23,11 @@ Kuikly iOS 宿主接入标准包集合，当前拆成两个独立 SPM 包：
 - 渲染适配注册
 - 扩展 provider 装配
 
-### `OpenKuiklyIOSRender`
-
-负责渲染核心本体，独立维护、独立发版。
-
 ## 2. 推荐接入方式
 
 ### 宿主 App
 
-宿主工程只引入 `KuiklyIOSHost`，不直接依赖渲染核心包。
-
-### 业务公共库
-
-如果某个业务库需要直接调用渲染核心 API，再单独引入 `OpenKuiklyIOSRender`。
+宿主工程只引入 `KuiklyIOSHost`。
 
 ## 3. 快速接入步骤
 
